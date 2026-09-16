@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — Identidade visual "Dr. Augusto Gaidukas | Hematologia"
+  Edite aqui para alterar a identidade visual da marca em um único lugar.
+*/
+@theme {
+  /* Tipografia */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Primavera base — off-white / branco quente */
+  --color-paper: #f7f4ee;
+  --color-cream: #f2ede3;
+
+  /* Institucional — azul petróleo / azul profundo */
+  --color-deep-50: #f2f5f6;
+  --color-deep-100: #e2e9ec;
+  --color-deep-200: #c5d3d8;
+  --color-deep-300: #9db4bc;
+  --color-deep-400: #6f8f9b;
+  --color-deep-500: #52737f;
+  --color-deep-600: #415d69;
+  --color-deep-700: #374d56;
+  --color-deep-800: #2b3c44;
+  --color-deep-900: #1f2d33;
+  --color-deep-950: #141e22;
+
+  /* Secundário discreto — bronze/âmbar queimado */
+  --color-bronze-100: #f3ead9;
+  --color-bronze-200: #e6d3b0;
+  --color-bronze-300: #d5b98a;
+  --color-bronze-400: #c09a5f;
+  --color-bronze-500: #a97f43;
+  --color-bronze-600: #8f6536;
+  --color-bronze-700: #6e4b2a;
+
+  /* Neutros */
+  --color-ink: #23262a;
+  --color-graphite: #4d545b;
+  --color-slate-warm: #6b7076;
+  --color-mist: #e9e4da;
+  --color-line: #dcd5c8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-deep-900);
+  color: var(--color-paper);
+}
+
+/* Foco visível para acessibilidade */
+:focus-visible {
+  outline: 2px solid var(--color-bronze-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Animação de entrada discreta (fade + slide) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.9s ease-out both;
+}
+
+/* Stagger delays para hero */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* Reveal em scroll — aplicado via IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
