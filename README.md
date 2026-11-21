@@ -41,14 +41,14 @@ Definida em `src/index.css` via `@theme` (Tailwind v4) e centralizada:
 Todos os textos, placeholders e links do site vivem em `src/data/doctor.ts`.
 Basta substituir os campos `[CAMPO]` pelos dados reais. Onde não houver dado:
 
-- Credenciais → `[CRM]`, `[RQE]` (apenas quando confirmados)
+- Credenciais → CRM `229153` e RQE `128025` (confirmados)
 - Biografia e formação → já preenchidas com os dados fornecidos (PUC-Campinas e
   residência em Hematologia e Hemoterapia pela Faculdade de Medicina de São José do Rio Preto)
 - Contato → `[Telefone]`, `[WhatsApp]`, `[E-mail]`, `[Endereço]`, `[Instagram]`
 - Link de agendamento → `doctor.links.booking`
 - Áreas de atuação e respostas de FAQ → listas `areas` e `faq`
 
-**Atenção:** nada de CRM, RQE ou endereço foi inventado; a página exibe apenas
+**Atenção:** nada de endereço ou contato foi inventado; a página exibe apenas
 dados genéricos e placeholders claramente marcados nesses campos.
 
 ## Blog (WordPress headless)

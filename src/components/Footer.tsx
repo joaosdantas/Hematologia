@@ -45,7 +45,7 @@ export function Footer() {
                 <br />
                 {doctor.professionalTitle} — {doctor.specialty}
                 <br />
-                {doctor.crm} · {doctor.rqe}
+                CRM {doctor.crm} · RQE {doctor.rqe}
               </p>
             </div>
 

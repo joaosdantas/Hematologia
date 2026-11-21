@@ -11,9 +11,9 @@ export const doctor = {
   professionalTitle: 'Hematologista',
   monogram: 'AG',
 
-  // Credenciais — placeholder até confirmação
-  crm: '[CRM]',
-  rqe: '[RQE]',
+  // Credenciais confirmadas
+  crm: '229153',
+  rqe: '128025',
 
   // Biografia institucional
   bio: 'Dr. Augusto Gaidukas é médico formado pela PUC-Campinas, com residência médica em Hematologia e Hemoterapia pela Faculdade de Medicina de São José do Rio Preto. Sua prática é orientada pela escuta atenta, pela investigação cuidadosa dos exames e pela clareza na comunicação com cada paciente.',
