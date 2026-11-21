@@ -59,7 +59,7 @@ por este projeto React, com o mesmo design system da landing.
 ### Como funciona
 
 ```
-[Admin] → cms.doutoraugusto.com.br/wp-admin  (escreve e publica)
+[Admin] → blog.doutoraugusto.com.br/wp-admin  (escreve e publica)
                      ↓
         WP REST API  /wp-json/wp/v2/posts?_embed
                      ↓ (fetch em runtime)
@@ -83,7 +83,7 @@ build e fazer o WordPress disparar o deploy por webhook.
 
 ### Configuração do WordPress
 
-1. Instale o WP em **`cms.doutoraugusto.com.br`** e defina `siteurl`/`home` com essa URL.
+1. Instale o WP em **`blog.doutoraugusto.com.br`** e defina `siteurl`/`home` com essa URL.
 2. Em **Configurações → Links permanentes**, escolha **Nome do post**.
 3. Crie os posts normalmente. Imagem destacada, categorias e resumo aparecem no site.
 4. Opcional: redirecione o tema público do WP para a landing, mantendo só o `wp-admin`
@@ -115,7 +115,7 @@ add_action('rest_api_init', function () {
 No `.env`:
 
 ```env
-VITE_WP_API_URL=https://cms.doutoraugusto.com.br
+VITE_WP_API_URL=https://blog.doutoraugusto.com.br
 ```
 
 Se vazio, a página `/blog` mostra um aviso de configuração em vez de quebrar.
