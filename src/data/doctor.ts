@@ -71,33 +71,39 @@ export const about = {
 export const areas = [
   {
     index: '01',
-    title: '[ÁREA DE ATUAÇÃO 01]',
-    description: '[Descrição breve da área de atuação a ser preenchida.]',
+    title: 'Onco-Hematologia',
+    description:
+      'Diagnóstico, estadiamento e tratamento atualizado de neoplasias hematológicas, como leucemias agudas e crônicas, linfomas (Hodgkin e não-Hodgkin) e mieloma múltiplo. Abordagem individualizada desde a investigação inicial até o seguimento pós-tratamento.',
   },
   {
     index: '02',
-    title: '[ÁREA DE ATUAÇÃO 02]',
-    description: '[Descrição breve da área de atuação a ser preenchida.]',
+    title: 'Terapias avançadas',
+    description:
+      'Condução clínica em imunoterapia de precisão com anticorpos biespecíficos, além de avaliação de elegibilidade, indicação e acompanhamento de pacientes candidatos a terapias celulares (como células CAR-T) e ao Transplante de Medula Óssea (autólogo e alogênico), desde o preparo pré-procedimento, indicação ao centro performador e o seguimento pós-terapia.',
   },
   {
     index: '03',
-    title: '[ÁREA DE ATUAÇÃO 03]',
-    description: '[Descrição breve da área de atuação a ser preenchida.]',
+    title: 'Hemostasia e Trombose',
+    description:
+      'Investigação e manejo clínico de distúrbios da coagulação, tanto hemorrágicos (doença de von Willebrand, hemofilias e plaquetopenias) quanto trombóticos (trombofilias hereditárias e adquiridas, trombose venosa profunda, embolia pulmonar e anticoagulação em cenários complexos).',
   },
   {
     index: '04',
-    title: '[ÁREA DE ATUAÇÃO 04]',
-    description: '[Descrição breve da área de atuação a ser preenchida.]',
+    title: 'Hematologia Clínica e Anemias',
+    description:
+      'Investigação aprofundada e tratamento de alterações do hemograma no consultório, incluindo anemias carenciais e hemolíticas, falências medulares, mielodisplasias, além de leucopenias (glóbulos brancos baixos), leucocitoses (glóbulos brancos altos), plaquetopenias (plaquetas baixas) e plaquetoses (plaquetas altas) a esclarecer.',
   },
   {
     index: '05',
-    title: '[ÁREA DE ATUAÇÃO 05]',
-    description: '[Descrição breve da área de atuação a ser preenchida.]',
+    title: 'Hemoterapia e Medicina Transfusional',
+    description:
+      'Suporte hemoterápico especializado, racionalização do uso de hemocomponentes, preparo pré-operatório (Patient Blood Management), manejo de reações transfusionais e condução de procedimentos como aférese terapêutica e sangria terapêutica.',
   },
   {
     index: '06',
-    title: '[ÁREA DE ATUAÇÃO 06]',
-    description: '[Descrição breve da área de atuação a ser preenchida.]',
+    title: 'Procedimentos Hematológicos Diagnósticos e Terapêuticos',
+    description:
+      'Realização de mielograma, biópsia de medula óssea, avaliação clínica por exame físico completo e indicação de exames laboratoriais de ponta como NGS (testagem genética de última geração) e imunofenotipagem por citometria de fluxo.',
   },
 ]
 

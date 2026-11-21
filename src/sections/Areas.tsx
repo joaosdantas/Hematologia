@@ -22,8 +22,8 @@ export function Areas() {
             Quando procurar um hematologista
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-graphite">
-            O atendimento do {doctor.shortName.toLowerCase()} abrange as seguintes áreas.
-            Cada item abaixo será detalhado com a descrição oficial em breve.
+            O atendimento do {doctor.shortName.toLowerCase()} abrange as seguintes áreas,
+            com investigação cuidadosa e acompanhamento próximo em cada etapa.
           </p>
         </div>
 
