@@ -61,15 +61,12 @@ export function About() {
               </h2>
             </div>
 
-            <div className="reveal mt-8 rounded-2xl border border-dashed border-bronze-400/50 bg-cream/60 p-6">
+            <div className="reveal mt-8 rounded-2xl border-l-2 border-bronze-400 bg-cream/60 p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-bronze-600">
-                {about.placeholderLabel}
+                {about.bioLabel}
               </p>
               <p className="mt-3 font-display text-lg leading-relaxed text-deep-900">
                 {doctor.bio}
-              </p>
-              <p className="mt-4 text-xs leading-relaxed text-slate-warm">
-                {about.placeholderHint}
               </p>
             </div>
 

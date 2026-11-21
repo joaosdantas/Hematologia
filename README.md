@@ -1,4 +1,4 @@
-# Dr. Augusto Gaidukas | Hematologia
+# Dr. Augusto Gaidukas | Hematologia e Hemoterapia
 
 Landing page profissional para o médico hematologista Dr. Augusto Gaidukas.
 
@@ -41,14 +41,15 @@ Definida em `src/index.css` via `@theme` (Tailwind v4) e centralizada:
 Todos os textos, placeholders e links do site vivem em `src/data/doctor.ts`.
 Basta substituir os campos `[CAMPO]` pelos dados reais. Onde não houver dado:
 
-- Credenciais → `[CRM]`, `[RQE]` (na verdade, apenas quando confirmados)
-- Biografia → `[INSERIR AQUI A BIOGRAFIA PROFISSIONAL DO DR. AUGUSTO]`
+- Credenciais → `[CRM]`, `[RQE]` (apenas quando confirmados)
+- Biografia e formação → já preenchidas com os dados fornecidos (PUC-Campinas e
+  residência em Hematologia e Hemoterapia pela Faculdade de Medicina de São José do Rio Preto)
 - Contato → `[Telefone]`, `[WhatsApp]`, `[E-mail]`, `[Endereço]`, `[Instagram]`
 - Link de agendamento → `doctor.links.booking`
 - Áreas de atuação e respostas de FAQ → listas `areas` e `faq`
 
-**Atenção:** nada de CRM, RQE, endereço ou formação foi inventado; por padrão
-a página exibe apenas dados genéricos e placeholders claramente marcados.
+**Atenção:** nada de CRM, RQE ou endereço foi inventado; a página exibe apenas
+dados genéricos e placeholders claramente marcados nesses campos.
 
 ## Blog (WordPress headless)
 

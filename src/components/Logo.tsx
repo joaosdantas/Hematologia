@@ -86,9 +86,9 @@ export function Logo({
           {doctor.name}
         </span>
         <span
-          className={`mt-1 text-[10px] font-medium uppercase tracking-[0.3em] ${subColor}`}
+          className={`mt-1 text-[10px] font-medium uppercase tracking-[0.16em] ${subColor}`}
         >
-          Hematologia
+          Hematologia e Hemoterapia
         </span>
       </span>
     </a>

@@ -52,7 +52,7 @@ export function Blog() {
                 aria-hidden="true"
               />
               <p className="relative mt-6 font-display text-xl font-medium leading-snug text-deep-900">
-                Espaço reservado para os primeiros artigos sobre hematologia.
+                Espaço reservado para os primeiros artigos sobre hematologia e hemoterapia.
               </p>
               <p className="relative mt-3 text-sm leading-relaxed text-slate-warm">
                 Os conteúdos serão publicados no blog deste site, alimentado por{' '}

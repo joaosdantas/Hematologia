@@ -7,7 +7,7 @@
 export const doctor = {
   name: 'Dr. Augusto Gaidukas',
   shortName: 'Augusto Gaidukas',
-  specialty: 'Hematologia',
+  specialty: 'Hematologia e Hemoterapia',
   professionalTitle: 'Hematologista',
   monogram: 'AG',
 
@@ -15,8 +15,8 @@ export const doctor = {
   crm: '[CRM]',
   rqe: '[RQE]',
 
-  // Biografia — placeholder até envio do texto real
-  bio: '[INSERIR AQUI A BIOGRAFIA PROFISSIONAL DO DR. AUGUSTO]',
+  // Biografia institucional
+  bio: 'Dr. Augusto Gaidukas é médico formado pela PUC-Campinas, com residência médica em Hematologia e Hemoterapia pela Faculdade de Medicina de São José do Rio Preto. Sua prática é orientada pela escuta atenta, pela investigação cuidadosa dos exames e pela clareza na comunicação com cada paciente.',
 
   // Contato — placeholders configuráveis
   contact: {
@@ -45,22 +45,24 @@ export const navigation = [
 
 export const hero = {
   kicker: 'Dr. Augusto Gaidukas',
-  title: 'Hematologia',
+  title: 'Hematologia e Hemoterapia',
   headline:
     'Investigação cuidadosa para entender o que os seus exames estão dizendo.',
-  sub: 'Atendimento humano e técnico em hematologia, com foco em escuta, clareza e acompanhamento próximo ao longo de todo o processo.',
+  sub: 'Atendimento humano e técnico em hematologia e hemoterapia, com foco em escuta, clareza e acompanhamento próximo ao longo de todo o processo.',
   primaryCta: 'Agendar consulta',
   secondaryCta: 'Conhecer o Dr. Augusto',
 }
 
 export const about = {
   title: 'Conheça o Dr. Augusto',
-  placeholderLabel: 'Biografia profissional',
-  placeholderHint:
-    'Estes campos usarão os dados oficiais do Dr. Augusto assim que estiverem disponíveis.',
+  bioLabel: 'Formação e atuação',
   fields: [
-    { label: 'Formação', value: '[Formação]' },
-    { label: 'Especialização', value: '[Especialização]' },
+    { label: 'Formação', value: 'PUC-Campinas' },
+    {
+      label: 'Residência',
+      value:
+        'Hematologia e Hemoterapia — Faculdade de Medicina de São José do Rio Preto',
+    },
     { label: 'CRM', value: doctor.crm },
     { label: 'RQE', value: doctor.rqe },
   ],
@@ -125,7 +127,7 @@ export const principles = [
 export const blog = {
   title: 'Informação também faz parte do cuidado.',
   description:
-    'Conteúdos sobre hematologia, exames e saúde produzidos para ajudar você a compreender melhor as informações relacionadas à sua saúde.',
+    'Conteúdos sobre hematologia e hemoterapia, exames e saúde produzidos para ajudar você a compreender melhor as informações relacionadas à sua saúde.',
   cta: 'Ver conteúdos',
   upcoming: true,
 }
