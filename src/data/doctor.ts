@@ -107,6 +107,14 @@ export const areas = [
   },
 ]
 
+export const secondOpinion = {
+  title: 'Segunda Opinião Especializada',
+  description:
+    'Revisão criteriosa de diagnósticos, exames laboratoriais, biópsias e planos terapêuticos em casos complexos, refratários ou em recaída. Um espaço dedicado a esclarecer dúvidas, discutir alternativas modernas de tratamento e oferecer segurança na tomada de decisão para pacientes e familiares.',
+  lead: 'Quando o caso pede uma análise adicional, há tempo e espaço para discutir cada decisão.',
+  cta: 'Solicitar segunda opinião',
+}
+
 export const principles = [
   {
     title: 'Escuta',

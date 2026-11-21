@@ -4,6 +4,7 @@ import { FloatingCta } from './components/FloatingCta'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { Areas } from './sections/Areas'
+import { SecondOpinion } from './sections/SecondOpinion'
 import { Approach } from './sections/Approach'
 import { Blog } from './sections/Blog'
 import { FAQ } from './sections/FAQ'
@@ -29,6 +30,7 @@ export default function App() {
             <Hero />
             <About />
             <Areas />
+            <SecondOpinion />
             <Approach />
             <Blog />
             <FAQ />

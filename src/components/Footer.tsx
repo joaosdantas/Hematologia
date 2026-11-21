@@ -105,6 +105,11 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
+                  <a href={resolve('#segunda-opiniao')} className="transition-colors duration-200 hover:text-paper">
+                    Segunda opinião
+                  </a>
+                </li>
+                <li>
                   <a href="/blog" className="transition-colors duration-200 hover:text-paper">
                     Blog
                   </a>
