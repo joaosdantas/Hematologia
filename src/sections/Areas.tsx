@@ -40,7 +40,7 @@ export function Areas() {
                 className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-bronze-500 transition-transform duration-300 group-hover:scale-x-100"
               />
               <span className="font-display text-sm tracking-[0.25em] text-bronze-500">
-                0{area.index}
+                {area.index}
               </span>
               <h3 className="mt-5 font-display text-xl font-medium leading-snug text-deep-950">
                 {area.title}

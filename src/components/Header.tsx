@@ -32,7 +32,7 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
         <Logo />
 
-        <nav aria-label="NavegaÃ§Ã£o principal" className="hidden lg:block">
+        <nav aria-label="Navegação principal" className="hidden lg:block">
           <ul className="flex items-center gap-8">
             {navigation.map((item) => (
               <li key={item.href}>
@@ -80,7 +80,7 @@ export function Header() {
             open ? 'translate-y-0 opacity-100' : '-translate-y-3 opacity-0'
           }`}
         >
-          <nav aria-label="NavegaÃ§Ã£o mÃ³vel">
+          <nav aria-label="Navegação mÃ³vel">
             <ul className="flex flex-col divide-y divide-line/80">
               {navigation.map((item, i) => (
                 <li key={item.href}>
@@ -107,7 +107,7 @@ export function Header() {
           </a>
 
           <a href="#contato" onClick={() => setOpen(false)} className="mt-5 block text-center text-base font-medium text-deep-700">
-            InformaÃ§Ãµes de contato
+            Informações de contato
           </a>
         </div>
       </div>

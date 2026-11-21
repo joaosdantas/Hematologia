@@ -4,8 +4,6 @@
 // disponíveis. A interface inteira é alimentada por este arquivo.
 // ---------------------------------------------------------------------------
 
-export const SITE_URL = 'https://doutoraugusto.com.br' // TODO: ajustar domínio real
-
 export const doctor = {
   name: 'Dr. Augusto Gaidukas',
   shortName: 'Augusto Gaidukas',
