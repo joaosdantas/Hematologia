@@ -8,7 +8,7 @@ import { hero, doctor } from '../data/doctor'
  */
 function PhotoPlaceholder() {
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] bg-deep-950">
+    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-deep-950 sm:aspect-[4/5]">
       {/* Gradações sutis em petróleo */}
       <div
         aria-hidden="true"
@@ -31,7 +31,7 @@ function PhotoPlaceholder() {
       {/* Moldura interna */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-4 rounded-3xl border border-paper/15"
+        className="pointer-events-none absolute inset-3 rounded-xl border border-paper/15"
       />
 
       {/* Metadados do retrato */}
@@ -57,7 +57,7 @@ export function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-titulo"
-      className="relative overflow-hidden pt-32 lg:pt-40"
+      className="relative overflow-hidden pt-28 lg:pt-32"
     >
       {/* Textura de fundo */}
       <div
@@ -69,8 +69,8 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="relative mx-auto w-full max-w-6xl px-5 pb-14 sm:px-8 lg:px-12 lg:pb-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* Texto */}
           <div>
             <p className="animate-fade-up flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.26em] text-bronze-600">
@@ -80,16 +80,16 @@ export function Hero() {
 
             <h1
               id="hero-titulo"
-              className="animate-fade-up delay-100 mt-6 font-display text-4xl font-medium leading-[1.08] tracking-tight text-deep-950 sm:text-5xl lg:text-6xl"
+              className="animate-fade-up delay-100 mt-5 font-display text-4xl font-medium leading-[1.08] tracking-tight text-deep-950 sm:text-5xl lg:text-6xl"
             >
               {hero.headline}
             </h1>
 
-            <p className="animate-fade-up delay-200 mt-6 max-w-xl text-lg leading-relaxed text-graphite">
+            <p className="animate-fade-up delay-200 mt-5 max-w-xl text-lg leading-relaxed text-graphite">
               {hero.sub}
             </p>
 
-            <div className="animate-fade-up delay-300 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="animate-fade-up delay-300 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={doctor.links.booking}
                 target="_blank"
@@ -108,7 +108,7 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="animate-fade-up delay-400 mt-8 text-xs leading-relaxed text-slate-warm">
+            <p className="animate-fade-up delay-400 mt-6 text-xs leading-relaxed text-slate-warm">
               Agendamento, horários e localização:
               <span className="font-semibold"> {doctor.contact.address}</span>
             </p>

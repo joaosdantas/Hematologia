@@ -41,7 +41,7 @@ function FeaturedCard({ post }: { post: WPPost }) {
   const categories = postCategories(post)
   const href = `/blog/${post.slug}`
   return (
-    <article className="reveal overflow-hidden rounded-[1.75rem] border border-line bg-paper">
+    <article className="reveal overflow-hidden rounded-2xl border border-line bg-paper">
       <div className="grid lg:grid-cols-2">
         <a href={href} className="group block aspect-[16/10] lg:aspect-auto lg:h-full" tabIndex={-1} aria-hidden="true">
           <CardImage post={post} className="h-full" />
@@ -77,11 +77,11 @@ function PostCard({ post }: { post: WPPost }) {
   const categories = postCategories(post)
   const href = `/blog/${post.slug}`
   return (
-    <article className="reveal group flex flex-col overflow-hidden rounded-[1.5rem] border border-line bg-paper transition-shadow duration-300 hover:shadow-lg hover:shadow-deep-950/5">
+    <article className="reveal group flex flex-col overflow-hidden rounded-xl border border-line bg-paper transition-colors duration-300 hover:border-bronze-300">
       <a href={href} className="block aspect-[16/10]" tabIndex={-1} aria-hidden="true">
         <CardImage post={post} className="h-full" />
       </a>
-      <div className="flex flex-1 flex-col p-7">
+      <div className="flex flex-1 flex-col p-6">
         <div className="flex flex-wrap items-center gap-3 text-[11px] font-medium uppercase tracking-[0.16em] text-bronze-600">
           {categories[0] && <span>{categories[0]}</span>}
           <span className="h-1 w-1 rounded-full bg-bronze-300" aria-hidden="true" />
@@ -129,7 +129,7 @@ function Skeleton() {
 
 function Notice({ title, children, onRetry }: { title: string; children: ReactNode; onRetry?: () => void }) {
   return (
-    <div className="reveal rounded-[1.75rem] border border-dashed border-bronze-400/50 bg-cream/60 p-10 text-center">
+    <div className="reveal rounded-2xl border border-dashed border-bronze-400/50 bg-cream/60 p-8 text-center">
       <h2 className="font-display text-2xl font-medium text-deep-950">{title}</h2>
       <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-graphite">{children}</p>
       {onRetry && (
@@ -198,7 +198,7 @@ export function BlogList() {
 
   return (
     <>
-      <section id="blog" aria-labelledby="blog-titulo" className="relative overflow-hidden pt-32 lg:pt-40">
+      <section id="blog" aria-labelledby="blog-titulo" className="relative overflow-hidden pt-28 lg:pt-32">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -208,7 +208,7 @@ export function BlogList() {
           }}
         />
         <Container>
-          <div className="relative max-w-3xl pb-12 lg:pb-16">
+          <div className="relative max-w-3xl pb-8 lg:pb-10">
             <SectionLabel>Blog</SectionLabel>
             <h1
               id="blog-titulo"
@@ -247,7 +247,7 @@ export function BlogList() {
         </Container>
       </section>
 
-      <section aria-label="Lista de conteúdos" className="pb-24 lg:pb-32">
+      <section aria-label="Lista de conteúdos" className="pb-16 lg:pb-24">
         <Container>
           <div ref={ref}>
             {!isWpConfigured ? (
@@ -276,14 +276,14 @@ export function BlogList() {
               <>
                 {posts.length > 0 && <FeaturedCard post={posts[0]} />}
                 {posts.length > 1 && (
-                  <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {posts.slice(1).map((post) => (
                       <PostCard key={post.id} post={post} />
                     ))}
                   </div>
                 )}
 
-                <div className="mt-12 flex flex-col items-center gap-3">
+                <div className="mt-8 flex flex-col items-center gap-3">
                   {page < totalPages && (
                     <button
                       type="button"

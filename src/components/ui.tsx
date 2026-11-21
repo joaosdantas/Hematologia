@@ -24,9 +24,9 @@ export function SectionLabel({
   return (
     <p
       id={id}
-      className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-bronze-600"
+      className="mb-3 flex items-center gap-3 text-xs font-semibold tracking-[0.06em] text-bronze-700"
     >
-      <span aria-hidden="true" className="h-px w-8 bg-bronze-400" />
+      <span aria-hidden="true" className="h-px w-6 bg-bronze-400" />
       {children}
     </p>
   )

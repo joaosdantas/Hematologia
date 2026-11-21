@@ -12,11 +12,11 @@ export function FAQ() {
     <section
       id="duvidas"
       aria-labelledby="duvidas-titulo"
-      className="scroll-mt-24 py-24 lg:py-32"
+      className="scroll-mt-24 py-16 lg:py-24"
     >
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="reveal lg:sticky lg:top-32 lg:self-start">
+        <div ref={ref} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="reveal lg:sticky lg:top-28 lg:self-start">
             <SectionLabel>Dúvidas</SectionLabel>
             <h2
               id="duvidas-titulo"
@@ -24,13 +24,13 @@ export function FAQ() {
             >
               Perguntas frequentes
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-graphite">
+            <p className="mt-4 text-lg leading-relaxed text-graphite">
               Respostas gerais e cuidadosas. Elas não substituem a avaliação individual
               em consulta.
             </p>
           </div>
 
-          <div ref={ref} className="reveal">
+          <div className="reveal">
             <div className="divide-y divide-line border-y border-line">
               {faq.map((item, i) => {
                 const isOpen = openIndex === i
@@ -45,7 +45,7 @@ export function FAQ() {
                         aria-expanded={isOpen}
                         aria-controls={panelId}
                         onClick={() => setOpenIndex(isOpen ? null : i)}
-                        className="flex w-full items-center justify-between gap-6 py-6 text-left transition-colors duration-200 hover:text-bronze-600"
+                        className="flex w-full items-center justify-between gap-6 py-5 text-left transition-colors duration-200 hover:text-bronze-600"
                       >
                         <span className="font-display text-lg font-medium text-deep-950">
                           {item.question}

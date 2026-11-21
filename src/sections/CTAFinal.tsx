@@ -7,11 +7,11 @@ export function CTAFinal() {
   const ref = useReveal()
 
   return (
-    <section aria-labelledby="cta-titulo" className="py-24 lg:py-32">
+    <section aria-labelledby="cta-titulo" className="py-16 lg:py-24">
       <Container>
         <div
           ref={ref}
-          className="reveal relative overflow-hidden rounded-[2rem] bg-deep-950 px-6 py-16 sm:px-14 lg:px-20 lg:py-24"
+          className="reveal relative overflow-hidden rounded-3xl bg-deep-950 px-6 py-12 sm:px-10 lg:px-16 lg:py-16"
         >
           <div
             aria-hidden="true"
@@ -28,11 +28,11 @@ export function CTAFinal() {
             </p>
             <h2
               id="cta-titulo"
-              className="mt-6 font-display text-3xl font-medium leading-tight tracking-tight text-paper sm:text-4xl lg:text-[2.75rem]"
+              className="mt-4 font-display text-3xl font-medium leading-tight tracking-tight text-paper sm:text-4xl lg:text-[2.75rem]"
             >
               {finalCta.headline}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-paper/70">
+            <p className="mt-4 text-lg leading-relaxed text-paper/70">
               O primeiro passo é simples: agendar um horário para conversarmos sobre
               o seu caso.
             </p>
@@ -40,7 +40,7 @@ export function CTAFinal() {
               href={doctor.links.booking}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center gap-2 rounded-full bg-paper px-8 py-4 text-base font-semibold text-deep-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-paper/10"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-paper px-8 py-4 text-base font-semibold text-deep-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-paper/10"
             >
               {finalCta.cta}
               <CalendarClock size={19} aria-hidden="true" />

@@ -9,11 +9,11 @@ export function Approach() {
     <section
       id="abordagem"
       aria-labelledby="abordagem-titulo"
-      className="scroll-mt-24 py-24 lg:py-32"
+      className="scroll-mt-24 py-16 lg:py-24"
     >
       <Container>
-        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-          <div className="reveal lg:sticky lg:top-32 lg:self-start">
+        <div ref={ref} className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="reveal lg:sticky lg:top-28 lg:self-start">
             <SectionLabel>Abordagem</SectionLabel>
             <h2
               id="abordagem-titulo"
@@ -21,15 +21,15 @@ export function Approach() {
             >
               Um atendimento baseado em escuta, investigação e clareza.
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-graphite">
+            <p className="mt-4 text-lg leading-relaxed text-graphite">
               São os princípios que orientam a comunicação e a relação com cada paciente —
               do primeiro contato ao acompanhamento.
             </p>
           </div>
 
-          <div ref={ref} className="divide-y divide-line">
+          <div className="divide-y divide-line">
             {principles.map((principle, i) => (
-              <article key={principle.title} className="reveal group flex gap-6 py-9">
+              <article key={principle.title} className="reveal group flex gap-5 py-7">
                 <span className="font-display text-sm tracking-[0.25em] text-bronze-500">
                   {String(i + 1).padStart(2, '0')}
                 </span>

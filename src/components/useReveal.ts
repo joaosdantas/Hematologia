@@ -1,9 +1,12 @@
 import { useEffect, useRef } from 'react'
 
 /**
- * Observa elementos `.reveal` dentro do container retornado.
- * O parâmetro `key` permite reobservar quando o conteúdo é carregado
- * assincronamente (ex.: posts vindos da API do WordPress).
+ * Observa elementos `.reveal` dentro do container retornado (e o próprio
+ * container, se ele também tiver a classe).
+ *
+ * O estado inicial de ocultação é aplicado via JS (classe `pending`), não no
+ * CSS. Assim, se o IntersectionObserver não existir ou falhar, o conteúdo
+ * continua visível — evitando seções inteiras em branco.
  */
 export function useReveal(threshold = 0.12, key?: string | number) {
   const ref = useRef<HTMLDivElement | null>(null)
@@ -12,17 +15,30 @@ export function useReveal(threshold = 0.12, key?: string | number) {
     const node = ref.current
     if (!node) return
 
-    const targets = node.querySelectorAll<HTMLElement>('.reveal')
+    const targets: HTMLElement[] = []
+    if (node.classList.contains('reveal')) targets.push(node)
+    targets.push(...Array.from(node.querySelectorAll<HTMLElement>('.reveal')))
+    if (!targets.length) return
+
+    const show = (el: HTMLElement) => {
+      el.classList.remove('pending')
+      el.classList.add('is-visible')
+    }
+
     if (!('IntersectionObserver' in window)) {
-      targets.forEach((el) => el.classList.add('is-visible'))
+      targets.forEach(show)
       return
     }
+
+    targets.forEach((el) => {
+      if (!el.classList.contains('is-visible')) el.classList.add('pending')
+    })
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
+            show(entry.target as HTMLElement)
             observer.unobserve(entry.target)
           }
         })

@@ -4,7 +4,7 @@ import { useReveal } from '../components/useReveal'
 
 function AboutPhoto() {
   return (
-    <div className="relative aspect-[3/4] overflow-hidden rounded-[1.75rem] bg-deep-800">
+    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-deep-800 sm:aspect-[3/4]">
       <div
         aria-hidden="true"
         className="absolute inset-0"
@@ -16,7 +16,7 @@ function AboutPhoto() {
       {/* Moldura */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-4 rounded-3xl border border-paper/20"
+        className="pointer-events-none absolute inset-3 rounded-xl border border-paper/20"
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <span
@@ -42,10 +42,10 @@ export function About() {
     <section
       id="sobre"
       aria-labelledby="sobre-titulo"
-      className="scroll-mt-24 border-t border-line/60 py-24 lg:py-32"
+      className="scroll-mt-24 border-t border-line/60 py-16 lg:py-24"
     >
       <Container>
-        <div ref={ref} className="grid items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+        <div ref={ref} className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="reveal">
             <AboutPhoto />
           </div>
@@ -61,7 +61,7 @@ export function About() {
               </h2>
             </div>
 
-            <div className="reveal mt-8 rounded-2xl border-l-2 border-bronze-400 bg-cream/60 p-6">
+            <div className="reveal mt-6 rounded-xl border-l-2 border-bronze-400 bg-cream/60 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-bronze-600">
                 {about.bioLabel}
               </p>
@@ -70,7 +70,7 @@ export function About() {
               </p>
             </div>
 
-            <dl className="reveal mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-line/70 sm:grid-cols-2">
+            <dl className="reveal mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-xl bg-line/70 sm:grid-cols-2">
               {about.fields.map((field) => (
                 <div key={field.label} className="bg-paper p-6">
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.2em] text-bronze-600">

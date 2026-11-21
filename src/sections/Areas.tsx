@@ -9,9 +9,10 @@ export function Areas() {
     <section
       id="atuacao"
       aria-labelledby="atuacao-titulo"
-      className="scroll-mt-24 bg-deep-50 py-24 lg:py-32"
+      className="scroll-mt-24 bg-deep-50 py-16 lg:py-24"
     >
       <Container>
+        <div ref={ref}>
         <div className="reveal max-w-2xl">
           <SectionLabel>Atuação</SectionLabel>
           <h2
@@ -26,14 +27,11 @@ export function Areas() {
           </p>
         </div>
 
-        <div
-          ref={ref}
-          className="mt-14 grid gap-px overflow-hidden rounded-3xl bg-line/80 sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl bg-line/80 sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => (
             <article
               key={area.index}
-              className="reveal group relative bg-paper p-8 transition-colors duration-300 hover:bg-white"
+              className="reveal group relative bg-paper p-6 transition-colors duration-300 hover:bg-white"
             >
               <div
                 aria-hidden="true"
@@ -56,6 +54,7 @@ export function Areas() {
           Em caso de dúvida sobre qual área se aplica ao seu caso, a avaliação em consulta é o
           caminho mais adequado.
         </p>
+        </div>
       </Container>
     </section>
   )

@@ -10,10 +10,10 @@ export function Blog() {
     <section
       id="conteudos"
       aria-labelledby="conteudos-titulo"
-      className="scroll-mt-24 border-t border-line/60 bg-cream/50 py-24 lg:py-32"
+      className="scroll-mt-24 border-t border-line/60 bg-cream/50 py-16 lg:py-24"
     >
       <Container>
-        <div ref={ref} className="grid items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
+        <div ref={ref} className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div className="reveal">
             <SectionLabel>Conteúdo</SectionLabel>
             <h2
@@ -41,7 +41,7 @@ export function Blog() {
 
           <div className="reveal">
             {/* Cartão editorial provisório — a lista real virá do blog (WordPress) */}
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-line bg-paper p-8">
+            <div className="relative overflow-hidden rounded-2xl border border-line bg-paper p-6">
               <div
                 aria-hidden="true"
                 className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-bronze-100"

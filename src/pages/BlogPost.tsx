@@ -57,7 +57,7 @@ export function BlogPost({ slug }: { slug: string }) {
     <>
       <article aria-labelledby="post-titulo">
         <Container>
-          <div className="max-w-3xl pb-10 pt-28 lg:pt-32">
+          <div className="max-w-3xl pb-8 pt-28 lg:pt-32">
             <a
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-medium text-deep-700 transition-colors hover:text-bronze-600"
@@ -84,7 +84,7 @@ export function BlogPost({ slug }: { slug: string }) {
                 </div>
 
                 {image && (
-                  <div className="mt-10 overflow-hidden rounded-[1.75rem] bg-deep-900">
+                  <div className="mt-8 overflow-hidden rounded-2xl bg-deep-900">
                     <img
                       src={image}
                       alt={media?.alt_text || plainText(post.title.rendered)}
@@ -94,7 +94,7 @@ export function BlogPost({ slug }: { slug: string }) {
                 )}
 
                 <div
-                  className="blog-prose mt-12"
+                  className="blog-prose mt-8"
                   dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                 />
 

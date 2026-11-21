@@ -35,7 +35,7 @@ export function Footer() {
       </h2>
 
       <div className="bg-deep-950 text-paper">
-        <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+        <div className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8 lg:px-12">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
             {/* Marca */}
             <div>
@@ -125,7 +125,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-14 border-t border-paper/10 pt-8">
+          <div className="mt-10 border-t border-paper/10 pt-6">
             <p className="max-w-3xl text-xs leading-relaxed text-paper/50">
               {footer.disclaimer}
             </p>
