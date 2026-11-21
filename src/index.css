@@ -126,3 +126,36 @@ body {
     transition: none;
   }
 }
+
+/* Conteúdo vindo do WordPress (HTML renderizado) — mesma identidade visual. */
+.blog-prose {
+  @apply text-base leading-[1.8] text-graphite;
+}
+.blog-prose > :first-child {
+  @apply mt-0;
+}
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4 {
+  @apply mt-12 mb-4 font-display font-medium leading-snug text-deep-950;
+}
+.blog-prose h2 { @apply text-3xl; }
+.blog-prose h3 { @apply text-2xl; }
+.blog-prose h4 { @apply text-xl; }
+.blog-prose p { @apply my-5; }
+.blog-prose a {
+  @apply text-deep-700 underline decoration-bronze-400 underline-offset-4 transition-colors hover:text-bronze-600;
+}
+.blog-prose strong { @apply font-semibold text-deep-900; }
+.blog-prose ul { @apply my-5 list-disc space-y-2 pl-6; }
+.blog-prose ol { @apply my-5 list-decimal space-y-2 pl-6; }
+.blog-prose li { @apply pl-1; }
+.blog-prose blockquote {
+  @apply my-8 border-l-2 border-bronze-400 pl-6 font-display text-xl italic leading-relaxed text-deep-800;
+}
+.blog-prose img { @apply my-8 w-full rounded-2xl; }
+.blog-prose figcaption { @apply -mt-6 mb-8 text-center text-xs text-slate-warm; }
+.blog-prose hr { @apply my-12 border-line; }
+.blog-prose code { @apply rounded bg-cream px-1.5 py-0.5 font-mono text-sm text-deep-900; }
+.blog-prose pre { @apply my-8 overflow-x-auto rounded-2xl bg-deep-950 p-6 text-sm text-paper; }
+.blog-prose pre code { @apply bg-transparent p-0 text-paper; }

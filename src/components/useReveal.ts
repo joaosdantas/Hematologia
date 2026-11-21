@@ -1,6 +1,11 @@
 import { useEffect, useRef } from 'react'
 
-export function useReveal(threshold = 0.12) {
+/**
+ * Observa elementos `.reveal` dentro do container retornado.
+ * O parâmetro `key` permite reobservar quando o conteúdo é carregado
+ * assincronamente (ex.: posts vindos da API do WordPress).
+ */
+export function useReveal(threshold = 0.12, key?: string | number) {
   const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -27,7 +32,7 @@ export function useReveal(threshold = 0.12) {
 
     targets.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
-  }, [threshold])
+  }, [threshold, key])
 
   return ref
 }

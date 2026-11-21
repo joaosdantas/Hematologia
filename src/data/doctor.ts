@@ -38,6 +38,7 @@ export const navigation = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Atuação', href: '#atuacao' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Dúvidas', href: '#duvidas' },
   { label: 'Contato', href: '#contato' },
 ]

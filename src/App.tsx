@@ -8,19 +8,33 @@ import { Approach } from './sections/Approach'
 import { Blog } from './sections/Blog'
 import { FAQ } from './sections/FAQ'
 import { CTAFinal } from './sections/CTAFinal'
+import { BlogList } from './pages/BlogList'
+import { BlogPost } from './pages/BlogPost'
+import { usePathname } from './lib/router'
 
 export default function App() {
+  const pathname = usePathname()
+  const postMatch = pathname.match(/^\/blog\/([^/]+)\/?$/)
+
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1">
-        <Hero />
-        <About />
-        <Areas />
-        <Approach />
-        <Blog />
-        <FAQ />
-        <CTAFinal />
+        {pathname === '/blog' ? (
+          <BlogList />
+        ) : postMatch ? (
+          <BlogPost slug={decodeURIComponent(postMatch[1])} />
+        ) : (
+          <>
+            <Hero />
+            <About />
+            <Areas />
+            <Approach />
+            <Blog />
+            <FAQ />
+            <CTAFinal />
+          </>
+        )}
       </main>
       <Footer />
       <FloatingCta />

@@ -2,10 +2,18 @@
 import { Menu, X } from 'lucide-react'
 import { Logo } from './Logo'
 import { navigation, doctor, hero } from '../data/doctor'
+import { usePathname } from '../lib/router'
 
 export function Header() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
+
+  // Na landing as âncoras são locais; no blog elas apontam de volta para a home.
+  const resolve = (href: string) => (href.startsWith('#') && isBlog ? `/${href}` : href)
+  const isActive = (href: string) =>
+    href === pathname || (href === '/blog' && pathname.startsWith('/blog'))
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -37,8 +45,13 @@ export function Header() {
             {navigation.map((item) => (
               <li key={item.href}>
                 <a
-                  href={item.href}
-                  className="text-sm font-medium text-deep-800/80 transition-colors duration-200 hover:text-deep-950"
+                  href={resolve(item.href)}
+                  aria-current={isActive(item.href) ? 'page' : undefined}
+                  className={`text-sm font-medium transition-colors duration-200 ${
+                    isActive(item.href)
+                      ? 'text-bronze-600'
+                      : 'text-deep-800/80 hover:text-deep-950'
+                  }`}
                 >
                   {item.label}
                 </a>
@@ -85,8 +98,9 @@ export function Header() {
               {navigation.map((item, i) => (
                 <li key={item.href}>
                   <a
-                    href={item.href}
+                    href={resolve(item.href)}
                     onClick={() => setOpen(false)}
+                    aria-current={isActive(item.href) ? 'page' : undefined}
                     className="flex items-center justify-between py-4 font-display text-2xl text-deep-900 transition-colors duration-200 hover:text-bronze-600"
                   >
                     {item.label}
@@ -106,7 +120,7 @@ export function Header() {
             {hero.primaryCta}
           </a>
 
-          <a href="#contato" onClick={() => setOpen(false)} className="mt-5 block text-center text-base font-medium text-deep-700">
+          <a href={resolve('#contato')} onClick={() => setOpen(false)} className="mt-5 block text-center text-base font-medium text-deep-700">
             Informações de contato
           </a>
         </div>

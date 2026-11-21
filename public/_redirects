@@ -1,0 +1,2 @@
+# Rotas do blog (SPA): qualquer URL desconhecida volta para o index.html.
+/*  /index.html  200

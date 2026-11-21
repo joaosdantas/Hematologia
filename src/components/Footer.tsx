@@ -1,6 +1,7 @@
 import { MapPin, Phone, MessageCircle, ArrowUp } from 'lucide-react'
 import { doctor, footer } from '../data/doctor'
 import { Logo } from './Logo'
+import { usePathname } from '../lib/router'
 
 function InstagramMark({ size = 20 }: { size?: number }) {
   return (
@@ -23,6 +24,10 @@ function InstagramMark({ size = 20 }: { size?: number }) {
 }
 
 export function Footer() {
+  const pathname = usePathname()
+  const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
+  const resolve = (href: string) => (href.startsWith('#') && isBlog ? `/${href}` : href)
+
   return (
     <footer id="contato" className="border-t border-deep-900" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -90,17 +95,22 @@ export function Footer() {
               </h3>
               <ul className="mt-6 space-y-3 text-sm text-paper/80">
                 <li>
-                  <a href="#sobre" className="transition-colors duration-200 hover:text-paper">
+                  <a href={resolve('#sobre')} className="transition-colors duration-200 hover:text-paper">
                     Sobre
                   </a>
                 </li>
                 <li>
-                  <a href="#atuacao" className="transition-colors duration-200 hover:text-paper">
+                  <a href={resolve('#atuacao')} className="transition-colors duration-200 hover:text-paper">
                     Atuação
                   </a>
                 </li>
                 <li>
-                  <a href="#duvidas" className="transition-colors duration-200 hover:text-paper">
+                  <a href="/blog" className="transition-colors duration-200 hover:text-paper">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href={resolve('#duvidas')} className="transition-colors duration-200 hover:text-paper">
                     Dúvidas frequentes
                   </a>
                 </li>
@@ -125,7 +135,7 @@ export function Footer() {
                 © {new Date().getFullYear()} {doctor.name}. Todos os direitos reservados.
               </p>
               <a
-                href="#inicio"
+                href={resolve('#inicio')}
                 aria-label="Voltar ao início da página"
                 className="inline-flex items-center gap-2 rounded-full border border-paper/20 px-4 py-2 transition-colors duration-200 hover:border-paper/50 hover:text-paper"
               >

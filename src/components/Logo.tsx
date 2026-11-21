@@ -1,4 +1,5 @@
 import { doctor } from '../data/doctor'
+import { usePathname } from '../lib/router'
 
 /**
  * Marca tipográfica + monograma "AG".
@@ -66,10 +67,12 @@ export function Logo({
   const nameColor = variant === 'dark' ? 'text-deep-900' : 'text-paper'
   const subColor =
     variant === 'dark' ? 'text-deep-600' : 'text-paper/70'
+  const pathname = usePathname()
+  const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
 
   return (
     <a
-      href="#inicio"
+      href={isBlog ? '/#inicio' : '#inicio'}
       className="group flex items-center gap-3"
       aria-label={`${doctor.name} — ${doctor.specialty}`}
     >
