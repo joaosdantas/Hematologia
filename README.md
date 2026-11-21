@@ -136,6 +136,15 @@ src/index.css            # estilos .blog-prose para o HTML do WP
 O conteúdo do post é inserido via `dangerouslySetInnerHTML` — seguro porque o
 HTML é produzido apenas por usuários autenticados no `wp-admin`.
 
+## Skills do projeto
+
+Instalados em `.opencode/skills/` e carregados automaticamente pelo OpenCode
+quando relevantes (ou via `@frontend-design` / `@webapp-testing` no prompt):
+
+- **frontend-design** — direção visual, tipografia e critério de design (Anthropic)
+- **webapp-testing** — testes de UI com Playwright e capturas de tela
+  (requer Python 3.12 + `py -m pip install playwright` + `py -m playwright install chromium`)
+
 ## Aviso
 
 As informações na página têm caráter informativo e não substituem uma consulta
