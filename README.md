@@ -59,11 +59,11 @@ por este projeto React, com o mesmo design system da landing.
 ### Como funciona
 
 ```
-[Admin] → blog.doutoraugusto.com.br/wp-admin  (escreve e publica)
+[Admin] → blog.cuidedoseusangue.com.br/wp-admin  (escreve e publica)
                      ↓
         WP REST API  /wp-json/wp/v2/posts?_embed
                      ↓ (fetch em runtime)
-[Visitante] → doutoraugusto.com.br/blog  e  /blog/:slug
+[Visitante] → cuidedoseusangue.com.br/blog  e  /blog/:slug
 ```
 
 Os posts aparecem **na hora em que o admin publica**, sem rebuild. Como a busca
@@ -83,7 +83,7 @@ build e fazer o WordPress disparar o deploy por webhook.
 
 ### Configuração do WordPress
 
-1. Instale o WP em **`blog.doutoraugusto.com.br`** e defina `siteurl`/`home` com essa URL.
+1. Instale o WP em **`blog.cuidedoseusangue.com.br`** e defina `siteurl`/`home` com essa URL.
 2. Em **Configurações → Links permanentes**, escolha **Nome do post**.
 3. Crie os posts normalmente. Imagem destacada, categorias e resumo aparecem no site.
 4. Opcional: redirecione o tema público do WP para a landing, mantendo só o `wp-admin`
@@ -92,7 +92,7 @@ build e fazer o WordPress disparar o deploy por webhook.
 ```php
 add_action('template_redirect', function () {
   if (!is_admin() && !(defined('REST_REQUEST') && REST_REQUEST)) {
-    wp_redirect('https://doutoraugusto.com.br/', 301);
+    wp_redirect('https://cuidedoseusangue.com.br/', 301);
     exit;
   }
 });
@@ -102,7 +102,7 @@ add_action('template_redirect', function () {
 
 ```php
 add_action('rest_api_init', function () {
-  header('Access-Control-Allow-Origin: https://doutoraugusto.com.br');
+  header('Access-Control-Allow-Origin: https://cuidedoseusangue.com.br');
   header('Access-Control-Allow-Methods: GET');
 });
 ```
@@ -115,7 +115,7 @@ add_action('rest_api_init', function () {
 No `.env`:
 
 ```env
-VITE_WP_API_URL=https://blog.doutoraugusto.com.br
+VITE_WP_API_URL=https://blog.cuidedoseusangue.com.br
 ```
 
 `VITE_WP_API_FALLBACK_URL` é opcional: uma segunda URL da mesma instalação do
