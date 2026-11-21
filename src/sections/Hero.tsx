@@ -1,50 +1,24 @@
 import { ArrowRight, CalendarClock } from 'lucide-react'
 import { hero, doctor } from '../data/doctor'
 
-/**
- * Placeholder visual reservado para a fotografia profissional do médico.
- * Quando a foto estiver disponível, basta substituir o conteúdo de
- * <PhotoPlaceholder /> por uma <img> dentro do mesmo contêiner.
- */
-function PhotoPlaceholder() {
+function DoctorPhoto() {
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-deep-950 sm:aspect-[4/5]">
-      {/* Gradações sutis em petróleo */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(120% 90% at 80% 10%, rgba(82,115,127,0.35) 0%, rgba(31,45,51,0) 55%), radial-gradient(100% 80% at 10% 100%, rgba(192,154,95,0.18) 0%, rgba(20,30,34,0) 60%)',
-        }}
+      <img
+        src="/dr-augusto.jpg"
+        alt={`${doctor.name}, ${doctor.professionalTitle.toLowerCase()}`}
+        width={1151}
+        height={1366}
+        className="h-full w-full object-cover object-[center_18%]"
       />
-      {/* Monograma em marca d'água */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 flex items-center justify-center"
-      >
-        <span className="select-none font-display text-[11rem] font-medium leading-none text-paper/[0.06]">
-          AG
-        </span>
-      </div>
-
-      {/* Moldura interna */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-3 rounded-xl border border-paper/15"
+        className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-deep-950/90 via-deep-950/35 to-transparent"
       />
-
-      {/* Metadados do retrato */}
-      <div className="absolute left-8 top-7 hidden items-center gap-2 sm:flex">
-        <span className="h-[3px] w-6 bg-bronze-500" aria-hidden="true" />
-        <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-paper/50">
-          Fotografia profissional em breve
-        </p>
-      </div>
-
-      <div className="absolute bottom-7 left-8 right-8">
+      <div className="pointer-events-none absolute inset-3 rounded-xl border border-paper/25" />
+      <div className="absolute bottom-7 left-7 right-7">
         <p className="font-display text-2xl text-paper">{doctor.name}</p>
-        <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.3em] text-paper/50">
+        <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.22em] text-paper/80">
           {doctor.specialty}
         </p>
       </div>
@@ -116,7 +90,7 @@ export function Hero() {
 
           {/* Espaço reservado para fotografia */}
           <div className="animate-fade-in delay-200">
-            <PhotoPlaceholder />
+            <DoctorPhoto />
           </div>
         </div>
       </div>

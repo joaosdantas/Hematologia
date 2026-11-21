@@ -5,32 +5,17 @@ import { useReveal } from '../components/useReveal'
 function AboutPhoto() {
   return (
     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-deep-800 sm:aspect-[3/4]">
+      <img
+        src="/dr-augusto.jpg"
+        alt={`${doctor.name} em seu consultório`}
+        width={1151}
+        height={1366}
+        className="h-full w-full object-cover object-[center_25%]"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(160deg, rgba(65,93,105,0.55) 0%, rgba(31,45,51,0.9) 100%)',
-        }}
+        className="pointer-events-none absolute inset-3 rounded-xl border border-paper/25"
       />
-      {/* Moldura */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-3 rounded-xl border border-paper/20"
-      />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span
-          aria-hidden="true"
-          className="select-none font-display text-[9rem] font-medium text-paper/10"
-        >
-          AG
-        </span>
-      </div>
-      <div className="absolute bottom-7 left-8 right-8">
-        <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-paper/60">
-          Fotografia do médico em breve
-        </p>
-      </div>
     </div>
   )
 }
