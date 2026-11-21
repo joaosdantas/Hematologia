@@ -3,9 +3,11 @@
 // O WP é usado somente para publicar; a renderização acontece aqui no React.
 // ---------------------------------------------------------------------------
 
-const BASE = (import.meta.env.VITE_WP_API_URL ?? '').replace(/\/+$/, '')
+const PRIMARY = (import.meta.env.VITE_WP_API_URL ?? '').replace(/\/+$/, '')
+const FALLBACK = (import.meta.env.VITE_WP_API_FALLBACK_URL ?? '').replace(/\/+$/, '')
+const BASES = [PRIMARY, FALLBACK].filter((base) => /^https?:\/\//.test(base))
 
-export const isWpConfigured = /^https?:\/\//.test(BASE)
+export const isWpConfigured = BASES.length > 0
 
 export interface WPTerm {
   name: string
@@ -44,15 +46,24 @@ interface ApiResult<T> {
 }
 
 async function request<T>(path: string): Promise<ApiResult<T>> {
-  const response = await fetch(`${BASE}/wp-json/wp/v2${path}`, {
-    headers: { Accept: 'application/json' },
-  })
-  if (!response.ok) throw new Error(`WordPress API respondeu ${response.status}`)
-  return {
-    data: (await response.json()) as T,
-    totalPages: Number(response.headers.get('X-WP-TotalPages') ?? 1),
-    total: Number(response.headers.get('X-WP-Total') ?? 0),
+  let lastError: unknown = new Error('Nenhuma URL do WordPress configurada')
+  for (const base of BASES) {
+    try {
+      const response = await fetch(`${base}/wp-json/wp/v2${path}`, {
+        headers: { Accept: 'application/json' },
+      })
+      if (!response.ok) throw new Error(`WordPress API respondeu ${response.status}`)
+      return {
+        data: (await response.json()) as T,
+        totalPages: Number(response.headers.get('X-WP-TotalPages') ?? 1),
+        total: Number(response.headers.get('X-WP-Total') ?? 0),
+      }
+    } catch (error) {
+      // Tenta a próxima URL (útil enquanto o DNS do domínio próprio não propaga).
+      lastError = error
+    }
   }
+  throw lastError
 }
 
 export function fetchPosts({

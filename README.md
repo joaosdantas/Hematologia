@@ -118,7 +118,10 @@ No `.env`:
 VITE_WP_API_URL=https://blog.doutoraugusto.com.br
 ```
 
-Se vazio, a página `/blog` mostra um aviso de configuração em vez de quebrar.
+`VITE_WP_API_FALLBACK_URL` é opcional: uma segunda URL da mesma instalação do
+WordPress (ex.: o alias `.vercel.app`) usada caso a principal não responda —
+útil enquanto o DNS do subdomínio não propaga. Se ambas estiverem vazias, a
+página `/blog` mostra um aviso de configuração em vez de quebrar.
 
 ### Arquivos envolvidos
 
