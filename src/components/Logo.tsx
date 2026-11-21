@@ -3,9 +3,16 @@ import { usePathname } from '../lib/router'
 
 /**
  * Monograma "AG" em SVG — símbolo da marca.
- * Reutilizado no logo, nas fotos e no card final.
+ * Reutilizado no logo, nas fotos, no card final e como marca d'água nos cards do blog.
  */
-export function Monogram({ size = 44 }: { size?: number }) {
+export function Monogram({
+  size = 44,
+  variant = 'solid',
+}: {
+  size?: number
+  variant?: 'solid' | 'outline'
+}) {
+  const outline = variant === 'outline'
   return (
     <svg
       width={size}
@@ -16,19 +23,17 @@ export function Monogram({ size = 44 }: { size?: number }) {
       aria-hidden="true"
       className="shrink-0"
     >
-      {/* Contorno quadrado sutil */}
-      <rect x="1" y="1" width="62" height="62" rx="14" fill="#141e22" />
+      {!outline && <rect x="1" y="1" width="62" height="62" rx="14" fill="#141e22" />}
       <rect
         x="1.75"
         y="1.75"
         width="60.5"
         height="60.5"
         rx="13.25"
-        stroke="#f7f4ee"
-        strokeOpacity="0.14"
+        stroke={outline ? 'currentColor' : '#f7f4ee'}
+        strokeOpacity={outline ? 1 : 0.14}
         strokeWidth="1.5"
       />
-      {/* Monograma serifado A / G */}
       <text
         x="32"
         y="41"
@@ -37,7 +42,7 @@ export function Monogram({ size = 44 }: { size?: number }) {
         fontWeight="500"
         fontSize="24"
         letterSpacing="1"
-        fill="#f7f4ee"
+        fill={outline ? 'currentColor' : '#f7f4ee'}
       >
         A
       </text>
@@ -49,7 +54,7 @@ export function Monogram({ size = 44 }: { size?: number }) {
         fontWeight="500"
         fontSize="13"
         letterSpacing="4"
-        fill="#c09a5f"
+        fill={outline ? 'currentColor' : '#c09a5f'}
       >
         G
       </text>

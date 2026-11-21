@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { ArrowRight, RefreshCw, Search } from 'lucide-react'
 import { blog, doctor } from '../data/doctor'
 import { Container, SectionLabel } from '../components/ui'
+import { Monogram } from '../components/Logo'
 import { useReveal } from '../components/useReveal'
 import {
   coverImage,
@@ -20,7 +21,7 @@ function CardImage({ post, className = '' }: { post: WPPost; className?: string 
   const image = coverImage(post)
   const media = post._embedded?.['wp:featuredmedia']?.[0]
   return (
-    <div className={`overflow-hidden bg-deep-900 ${className}`}>
+    <div className={`relative overflow-hidden bg-deep-900 ${className}`}>
       {image ? (
         <img
           src={image}
@@ -33,6 +34,9 @@ function CardImage({ post, className = '' }: { post: WPPost; className?: string 
           <span className="select-none font-display text-6xl text-paper/10">AG</span>
         </div>
       )}
+      <div className="pointer-events-none absolute bottom-3 right-3 text-deep-950/35">
+        <Monogram size={64} variant="outline" />
+      </div>
     </div>
   )
 }
