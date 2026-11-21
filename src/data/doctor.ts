@@ -79,7 +79,7 @@ export const areas = [
     index: '02',
     title: 'Terapias avançadas',
     description:
-      'Condução clínica em imunoterapia de precisão com anticorpos biespecíficos, além de avaliação de elegibilidade, indicação e acompanhamento de pacientes candidatos a terapias celulares (como células CAR-T) e ao Transplante de Medula Óssea (autólogo e alogênico), desde o preparo pré-procedimento, indicação ao centro performador e o seguimento pós-terapia.',
+      'Condução clínica em imunoterapia de precisão com anticorpos biespecíficos, além de avaliação de elegibilidade, indicação e acompanhamento de pacientes candidatos a terapias celulares (como células CAR-T) e ao Transplante de Medula Óssea (autólogo e alogênico), desde indicação ao centro performador, discussão em tumor board e o seguimento pós-terapia.',
   },
   {
     index: '03',
