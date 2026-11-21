@@ -115,6 +115,25 @@ export const secondOpinion = {
   cta: 'Solicitar segunda opinião',
 }
 
+export const consultation = {
+  title: 'Como é a consulta',
+  lead: 'Presencial ou online, o encontro é organizado para dar tempo à sua história, aos exames e às dúvidas.',
+  modes: [
+    {
+      title: 'Presencial',
+      description:
+        'No consultório, a conversa acontece com calma e privacidade. Você pode trazer exames impressos ou em arquivo, a lista de medicações em uso e o histórico de tratamentos. Quando necessário, o exame físico e a revisão dos resultados fazem parte do mesmo encontro.',
+    },
+    {
+      title: 'Online',
+      description:
+        'Por videoconferência, o cuidado com a escuta e com a explicação é o mesmo. Antes do horário, você recebe o link de acesso; organize seus exames em arquivo para compartilhar durante a conversa. Ao final, os próximos passos ficam registrados por escrito.',
+    },
+  ],
+  note: 'Algumas situações exigem exame físico ou procedimento presencial. Isso é avaliado caso a caso, com transparência.',
+  cta: 'Agendar consulta',
+}
+
 export const principles = [
   {
     title: 'Escuta',

@@ -20,7 +20,7 @@ npx tsc -b       # checagem de tipos
 ```
 src/
 ├── components/    # Logo, Header, Footer, FloatingCta, UI primitivas
-├── sections/      # Hero, About, Areas, SecondOpinion, Approach, Blog, FAQ, CTAFinal
+├── sections/      # Hero, About, Areas, SecondOpinion, Approach, Consulta, Blog, FAQ, CTAFinal
 ├── data/
 │   └── doctor.ts  # ⭐ TODOS os dados do médico e do site em um único arquivo
 └── index.css      # Design tokens (cores, tipografia) — edite aqui a identidade

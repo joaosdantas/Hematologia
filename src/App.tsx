@@ -6,6 +6,7 @@ import { About } from './sections/About'
 import { Areas } from './sections/Areas'
 import { SecondOpinion } from './sections/SecondOpinion'
 import { Approach } from './sections/Approach'
+import { Consulta } from './sections/Consulta'
 import { Blog } from './sections/Blog'
 import { FAQ } from './sections/FAQ'
 import { CTAFinal } from './sections/CTAFinal'
@@ -32,6 +33,7 @@ export default function App() {
             <Areas />
             <SecondOpinion />
             <Approach />
+            <Consulta />
             <Blog />
             <FAQ />
             <CTAFinal />
