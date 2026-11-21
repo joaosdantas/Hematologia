@@ -1,5 +1,6 @@
 import { ArrowRight, CalendarClock } from 'lucide-react'
 import { hero, doctor } from '../data/doctor'
+import { Monogram } from '../components/Logo'
 
 function DoctorPhoto() {
   return (
@@ -16,6 +17,9 @@ function DoctorPhoto() {
         className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-deep-950/90 via-deep-950/35 to-transparent"
       />
       <div className="pointer-events-none absolute inset-3 rounded-xl border border-paper/25" />
+      <div className="absolute right-6 top-6 opacity-80">
+        <Monogram size={48} />
+      </div>
       <div className="absolute bottom-7 left-7 right-7">
         <p className="font-display text-2xl text-paper">{doctor.name}</p>
         <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.22em] text-paper/80">

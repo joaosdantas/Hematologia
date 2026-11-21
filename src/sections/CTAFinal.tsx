@@ -1,6 +1,7 @@
 import { CalendarClock } from 'lucide-react'
 import { finalCta, doctor } from '../data/doctor'
 import { Container } from '../components/ui'
+import { Monogram } from '../components/Logo'
 import { useReveal } from '../components/useReveal'
 
 export function CTAFinal() {
@@ -21,6 +22,13 @@ export function CTAFinal() {
                 'radial-gradient(90% 120% at 15% -10%, rgba(111,143,155,0.28) 0%, rgba(20,30,34,0) 60%), radial-gradient(70% 90% at 100% 110%, rgba(192,154,95,0.16) 0%, rgba(20,30,34,0) 55%)',
             }}
           />
+
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-12 -right-10 hidden opacity-[0.09] sm:block"
+          >
+            <Monogram size={280} />
+          </div>
 
           <div className="relative max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.26em] text-bronze-400">

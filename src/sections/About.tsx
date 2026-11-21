@@ -1,5 +1,6 @@
 import { about, doctor } from '../data/doctor'
 import { Container, SectionLabel } from '../components/ui'
+import { Monogram } from '../components/Logo'
 import { useReveal } from '../components/useReveal'
 
 function AboutPhoto() {
@@ -16,6 +17,9 @@ function AboutPhoto() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-3 rounded-xl border border-paper/25"
       />
+      <div className="absolute right-6 top-6 opacity-80">
+        <Monogram size={44} />
+      </div>
     </div>
   )
 }

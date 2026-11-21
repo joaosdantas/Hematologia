@@ -2,10 +2,10 @@ import { doctor } from '../data/doctor'
 import { usePathname } from '../lib/router'
 
 /**
- * Marca tipográfica + monograma "AG".
- * O monograma é construído em SVG para uso futuro como símbolo da marca.
+ * Monograma "AG" em SVG — símbolo da marca.
+ * Reutilizado no logo, nas fotos e no card final.
  */
-function Monogram({ size = 44 }: { size?: number }) {
+export function Monogram({ size = 44 }: { size?: number }) {
   return (
     <svg
       width={size}
